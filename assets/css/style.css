@@ -1421,15 +1421,15 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 }
 
 /* ==========================================================================
-   4. THE AUTOVAULT ATELIER STANDARD (DARK LUXURY BENTO)
+   4. THE AUTOVAULT ATELIER STANDARD (LIGHT LUXURY BENTO)
    ========================================================================== */
 .atelier-section {
   padding: 100px 0 110px;
-  background: #0b0d13;
+  background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 50%, #f4f6fa 100%);
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .atelier-section::before {
@@ -1439,7 +1439,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   right: -100px;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(255, 87, 34, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 87, 34, 0.06) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -1451,7 +1451,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   left: -100px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 179, 0, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 179, 0, 0.05) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -1479,9 +1479,9 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   font-weight: 800;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #FFA07A;
-  background: rgba(255, 87, 34, 0.12);
-  border: 1px solid rgba(255, 87, 34, 0.3);
+  color: #d84315;
+  background: rgba(255, 87, 34, 0.08);
+  border: 1px solid rgba(255, 87, 34, 0.22);
   padding: 6px 16px;
   border-radius: var(--radius-pill);
   margin-bottom: 1rem;
@@ -1501,14 +1501,22 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   font-size: clamp(2.3rem, 3.8vw, 3.2rem);
   font-weight: 600;
   line-height: 1.15;
-  color: #ffffff;
+  color: #11141d;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
 }
 
+.atelier-title .highlight-bolder {
+  background: linear-gradient(135deg, #FF5722 0%, #D84315 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 .atelier-subtitle {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: #555e6d;
   line-height: 1.65;
 }
 
@@ -1521,17 +1529,18 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 }
 
 .bento-card {
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 26px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(18, 22, 32, 0.04);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .bento-card:hover {
-  border-color: rgba(255, 87, 34, 0.45);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 87, 34, 0.2);
+  border-color: rgba(255, 87, 34, 0.35);
+  box-shadow: 0 20px 48px rgba(18, 22, 32, 0.1), 0 0 0 1px rgba(255, 87, 34, 0.2);
   transform: translateY(-5px);
 }
 
@@ -1542,6 +1551,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   flex-direction: column;
   justify-content: flex-end;
   min-height: 540px;
+  background: #11141d;
 }
 
 .bento-media-box {
@@ -1564,7 +1574,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 .bento-media-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(11, 13, 19, 0.25) 0%, rgba(11, 13, 19, 0.7) 50%, rgba(11, 13, 19, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(11, 13, 19, 0.15) 0%, rgba(11, 13, 19, 0.65) 50%, rgba(11, 13, 19, 0.94) 100%);
 }
 
 .bento-badge-chip {
@@ -1621,7 +1631,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 
 .bento-card-desc {
   font-size: 0.94rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.6;
   margin-bottom: 1.6rem;
 }
@@ -1674,15 +1684,15 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   gap: 10px;
 }
 
-/* Bento Pillar Cards (Top Right & Bottom Right) */
+/* Bento Pillar Cards (Top Right & Bottom Right) - LIGHT LUXURY */
 .bento-pillar-card {
   padding: 2.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 35px rgba(18, 22, 32, 0.05);
 }
 
 .pillar-icon-box {
@@ -1693,7 +1703,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
@@ -1703,8 +1713,8 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 }
 
 .pillar-icon-box.icon-coral {
-  background: rgba(255, 87, 34, 0.12);
-  border-color: rgba(255, 87, 34, 0.3);
+  background: rgba(255, 87, 34, 0.1);
+  border-color: rgba(255, 87, 34, 0.25);
 }
 
 .bento-pillar-card:hover .pillar-icon-box {
@@ -1714,14 +1724,14 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 .pillar-title {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #11141d;
   letter-spacing: -0.015em;
   margin-bottom: 8px;
 }
 
 .pillar-desc {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  color: #555e6d;
   line-height: 1.55;
   margin-bottom: 1.25rem;
 }
@@ -1734,16 +1744,16 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 }
 
 .pillar-chip {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #f4f6fa;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 5px 12px;
   border-radius: var(--radius-pill);
   font-size: 0.76rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.88);
+  color: #333d4d;
 }
 
-/* Bento Ribbon Card (Spans Full Width Bottom) */
+/* Bento Ribbon Card (Spans Full Width Bottom) - LIGHT LUXURY */
 .bento-ribbon-card {
   grid-column: 1 / -1;
   padding: 1.6rem 2.4rem;
@@ -1751,8 +1761,9 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 87, 34, 0.08) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(90deg, #ffffff 0%, #fff8f5 100%);
+  border: 1px solid rgba(255, 87, 34, 0.18);
+  box-shadow: 0 10px 30px rgba(18, 22, 32, 0.05);
 }
 
 .ribbon-left {
@@ -1765,24 +1776,25 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(0, 229, 255, 0.12);
-  border: 1px solid rgba(0, 229, 255, 0.35);
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  color: #0077b6;
 }
 
 .ribbon-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #11141d;
   margin-bottom: 2px;
 }
 
 .ribbon-desc {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.84rem;
+  color: #555e6d;
 }
 
 .btn-pill-outline-light {
@@ -1791,22 +1803,22 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   gap: 8px;
   padding: 11px 22px;
   border-radius: var(--radius-pill);
-  border: 1.5px solid rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid #11141d;
+  background: #11141d;
   color: #ffffff;
   font-size: 0.86rem;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
   transition: all 0.25s ease;
-  backdrop-filter: blur(8px);
 }
 
 .btn-pill-outline-light:hover {
-  border-color: var(--accent-coral);
-  color: var(--accent-coral);
-  background: rgba(255, 87, 34, 0.15);
+  border-color: #FF5722;
+  color: #ffffff;
+  background: #FF5722;
   transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 87, 34, 0.35);
 }
 
 /* ==========================================================================
@@ -1814,9 +1826,9 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
    ========================================================================== */
 .performance-stats-section {
   padding: 100px 0 115px;
-  background: radial-gradient(circle at 82% 20%, rgba(255, 87, 34, 0.14) 0%, transparent 45%), radial-gradient(circle at 18% 75%, rgba(0, 229, 255, 0.07) 0%, transparent 50%), #090b10;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: radial-gradient(circle at 82% 20%, rgba(255, 87, 34, 0.05) 0%, transparent 45%), #f4f6fa;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   position: relative;
   overflow: hidden;
 }
@@ -1825,7 +1837,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 32px 32px;
   pointer-events: none;
   opacity: 0.35;
@@ -1845,7 +1857,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   position: relative;
   border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 35px 90px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 70px -15px rgba(18, 22, 32, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
   min-height: 560px;
   display: flex;
   flex-direction: column;
@@ -2159,7 +2171,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   border-radius: 999px;
 }
 
-/* 4-Column Architectural Metric Pavilion */
+/* 4-Column Architectural Metric Pavilion - LIGHT LUXURY */
 .metrics-pavilion-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2167,15 +2179,13 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 }
 
 .metric-pavilion-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.012) 100%);
+  background: #ffffff;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 2.2rem 1.85rem;
-  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 35px -8px rgba(18, 22, 32, 0.06);
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   position: relative;
   overflow: hidden;
   transition: transform 0.4s var(--ease-smooth), border-color 0.35s ease, box-shadow 0.4s var(--ease-smooth);
@@ -2187,16 +2197,16 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255, 87, 34, 0.5), transparent);
+  height: 3px;
+  background: linear-gradient(90deg, #FF5722, #FFB300);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
 
 .metric-pavilion-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255, 87, 34, 0.45);
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 35px rgba(255, 87, 34, 0.2);
+  border-color: rgba(255, 87, 34, 0.35);
+  box-shadow: 0 22px 55px -10px rgba(18, 22, 32, 0.12), 0 0 0 1px rgba(255, 87, 34, 0.15);
 }
 
 .metric-pavilion-card:hover::before {
@@ -2214,10 +2224,10 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   font-size: 2.9rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: #ffffff;
+  color: #11141d;
   line-height: 1;
   font-family: var(--font-display);
-  background: linear-gradient(135deg, #ffffff 45%, #FFA07A 100%);
+  background: linear-gradient(135deg, #11141d 40%, #FF5722 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2227,9 +2237,9 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: rgba(255, 87, 34, 0.12);
-  border: 1px solid rgba(255, 87, 34, 0.32);
-  color: var(--accent-coral);
+  background: rgba(255, 87, 34, 0.09);
+  border: 1px solid rgba(255, 87, 34, 0.25);
+  color: #FF5722;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2238,29 +2248,29 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 
 .metric-pavilion-card:hover .metric-icon-badge {
   transform: scale(1.12) rotate(6deg);
-  border-color: var(--accent-coral);
-  background: rgba(255, 87, 34, 0.2);
+  border-color: #FF5722;
+  background: rgba(255, 87, 34, 0.16);
 }
 
 .metric-name {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #11141d;
   margin-bottom: 6px;
   letter-spacing: -0.01em;
 }
 
 .metric-description {
-  font-size: 0.86rem;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+  color: #555e6d;
   line-height: 1.55;
   margin-bottom: 1.25rem;
 }
 
 .metric-progress-indicator {
   width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.08);
+  height: 5px;
+  background: #eaedf2;
   border-radius: 999px;
   overflow: hidden;
   margin-bottom: 1.25rem;
@@ -2268,7 +2278,7 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #FF6E40, #FFB300);
+  background: linear-gradient(90deg, #FF5722, #FFB300);
   border-radius: 999px;
   transition: width 1.2s ease;
 }
@@ -2278,9 +2288,9 @@ body:has(.page-hero-banner) .site-header:not(.scrolled) .logo-mark svg path[stro
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: #FFA07A;
-  background: rgba(255, 87, 34, 0.12);
-  border: 1px solid rgba(255, 87, 34, 0.28);
+  color: #d84315;
+  background: rgba(255, 87, 34, 0.08);
+  border: 1px solid rgba(255, 87, 34, 0.22);
   padding: 5px 12px;
   border-radius: 6px;
   display: inline-block;
