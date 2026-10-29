@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Vault Inventory — Curated Luxury & Exotic Cars | AUTOVAULT</title>
+  <meta name="description" content="Explore AUTOVAULT's exclusive inventory of certified luxury and exotic supercars. Mercedes-AMG, Lamborghini, Bentley, Porsche, Ferrari, and BMW.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,10 90,85 10,85' fill='%23FF5722'/></svg>">
+</head>
+<body class="autovault-theme">
+
+  <!-- Floating Toast -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toastMessage">Added to your wishlist!</div>
+  </div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header header-dark" id="header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="logo-mark">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+            <path d="M16 3L29 27H3L16 3Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M16 11L23 24H9L16 11Z" fill="#FF5722"/>
+          </svg>
+        </div>
+        <span class="logo-text">AUTOVAULT</span>
+      </a>
+
+      <nav class="nav-pill" id="navPill">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="cars.html" class="nav-link active">Cars</a></li>
+          <li class="nav-item"><a href="cars.html" class="nav-link">Buy</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-circle-btn" id="searchTrigger" aria-label="Search" title="Search Inventory">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="action-circle-btn wishlist-btn" id="wishlistTrigger" aria-label="Saved Cars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="wishlist-badge-count" id="wishlistCount">0</span>
+        </button>
+        <button class="btn-pill-dark btn-test-drive" id="openTestDriveBtn">
+          <span>Book a Test Drive</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO BANNER -->
+    <section class="page-hero-banner">
+      <div class="page-hero-container reveal-on-scroll">
+        <div class="page-hero-inner-split">
+          
+          <!-- Left: Hero Content -->
+          <div class="page-hero-content">
+            <div class="page-breadcrumbs">
+              <a href="index.html">Home</a>
+              <span class="sep">/</span>
+              <span>Vault Inventory</span>
+            </div>
+            <div class="page-hero-eyebrow">
+              <span class="hero-pulse-dot"></span>
+              <span>CERTIFIED VAULT ALLOCATIONS · 2026 FLEET</span>
+            </div>
+            <h1 class="page-title">The Vault <span class="page-title-gradient">Collection</span></h1>
+            <p class="page-subtitle">Every vehicle is hand-inspected across 150 mechanical checkpoints, certified for provenance, and ready for immediate enclosed delivery.</p>
+            
+            <div class="page-hero-chips">
+              <div class="hero-chip-item">
+                <span class="hero-chip-dot"></span>
+                <span>17 Verified Allocations</span>
+              </div>
+              <div class="hero-chip-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFA07A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>150-Point Provenance Check</span>
+              </div>
+              <div class="hero-chip-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon></svg>
+                <span>Enclosed Global Logistics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live Allocation Telemetry HUD Card -->
+          <div class="page-hero-telemetry-card">
+            <div class="telemetry-card-header">
+              <div class="telemetry-live-badge">
+                <span class="hero-pulse-dot"></span>
+                <span>LIVE VAULT STATUS</span>
+              </div>
+              <span class="telemetry-time">DISPATCH DESK READY</span>
+            </div>
+            
+            <div class="telemetry-metrics-grid">
+              <div class="telemetry-stat-box">
+                <span class="t-stat-label">CURATED PORTFOLIO</span>
+                <span class="t-stat-val">₹ 48.5 <small>CR+</small></span>
+                <span class="t-stat-sub">Across 17 Active Allocations</span>
+              </div>
+              <div class="telemetry-stat-box">
+                <span class="t-stat-label">AVG ODOMETER</span>
+                <span class="t-stat-val">4,850 <small>KM</small></span>
+                <span class="t-stat-sub">Single-Collector Certified</span>
+              </div>
+              <div class="telemetry-stat-box">
+                <span class="t-stat-label">PEAK SPRINT</span>
+                <span class="t-stat-val">2.8 <small>SEC</small></span>
+                <span class="t-stat-sub">0-100 km/h Benchmark</span>
+              </div>
+              <div class="telemetry-stat-box">
+                <span class="t-stat-label">QUALITY SCORE</span>
+                <span class="t-stat-val">100%</span>
+                <span class="t-stat-sub">Zero-Accident Title Vault</span>
+              </div>
+            </div>
+
+            <div class="telemetry-card-footer">
+              <span class="t-quick-label">FAST-FILTER BY MARQUE:</span>
+              <div class="t-quick-tags">
+                <button class="t-tag-btn" data-quick-filter="Porsche">Porsche</button>
+                <button class="t-tag-btn" data-quick-filter="Ferrari">Ferrari</button>
+                <button class="t-tag-btn" data-quick-filter="Mercedes-Benz">AMG</button>
+                <button class="t-tag-btn" data-quick-filter="Lamborghini">Lamborghini</button>
+                <button class="t-tag-btn" data-quick-filter="BMW">BMW M</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INVENTORY TOOLBAR -->
+    <section class="inventory-toolbar">
+      <div class="toolbar-container">
+        <div class="search-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="inventorySearch" placeholder="Search by model, brand, or engine..." aria-label="Search Inventory">
+        </div>
+        <div class="filter-pills-row">
+          <button class="filter-pill active" data-category="all">All Vehicles</button>
+          <button class="filter-pill" data-category="supercar">Supercars</button>
+          <button class="filter-pill" data-category="suv">Luxury SUVs</button>
+          <button class="filter-pill" data-category="sedan">Flagship Sedans</button>
+          <button class="filter-pill" data-category="electric">Electric / Hybrid</button>
+          <button class="filter-pill" data-category="grand-tourer">Grand Tourers</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVENTORY GRID SECTION -->
+    <section class="featured-section" style="padding-top: 40px; background: #ffffff;">
+      <div class="featured-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <div id="inventoryCount" style="font-weight: 700; color: var(--text-secondary); font-size: 0.95rem;">12 Vehicles Available</div>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Verified Stock · Real-time Availability</span>
+        </div>
+
+        <div class="cars-grid" id="inventoryGrid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+          
+          <!-- Car 1: Mercedes-AMG GT R -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-1" data-category="supercar" data-brand="mercedes" data-title="Mercedes-AMG GT R Coupe">
+            <div class="car-card-media">
+              <img src="assets/images/slide1.png" alt="Mercedes-AMG GT R Coupe" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save Mercedes-AMG GT R"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge" style="background:#FF5722; color:#fff;">Vault Allocation</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Mercedes-AMG GT R Coupe</h3>
+              <p class="car-card-specs">2024 · 3,400 km · 4.0L Bi-Turbo V8 · 577 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 2.71 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Mercedes-AMG GT R Coupe" data-price="₹ 2.71 Cr" data-img="assets/images/slide1.png" data-specs="3.6s 0-100 · 577 HP · 4.0L Bi-Turbo V8" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 2: Lamborghini Huracán Tecnica -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-2" data-category="supercar" data-brand="lamborghini" data-title="Lamborghini Huracán Tecnica">
+            <div class="car-card-media">
+              <img src="assets/images/slide2.png" alt="Lamborghini Huracán Tecnica" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save Lamborghini"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-hybrid">V10 Pure</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Lamborghini Huracán Tecnica</h3>
+              <p class="car-card-specs">2024 · 1,800 km · 5.2L Naturally Aspirated V10 · 631 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 4.04 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Lamborghini Huracán Tecnica" data-price="₹ 4.04 Cr" data-img="assets/images/slide2.png" data-specs="3.2s 0-100 · 631 HP · 5.2L V10" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 3: Bentley Continental GT -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-3" data-category="grand-tourer" data-brand="bentley" data-title="Bentley Continental GT V8">
+            <div class="car-card-media">
+              <img src="assets/images/slide3.png" alt="Bentley Continental GT V8" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save Bentley"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-hybrid">Mulliner Spec</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Bentley Continental GT V8</h3>
+              <p class="car-card-specs">2024 · 4,100 km · 4.0L Twin-Turbo V8 · 542 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 3.95 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Bentley Continental GT V8" data-price="₹ 3.95 Cr" data-img="assets/images/slide3.png" data-specs="3.9s 0-100 · 542 HP · Twin-Turbo V8" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 4: Porsche 718 Cayman GT4 -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-4" data-category="supercar" data-brand="porsche" data-title="Porsche 718 Cayman GT4">
+            <div class="car-card-media">
+              <img src="assets/images/hero_autovault_porsche.jpg" alt="Porsche 718 Cayman GT4" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save Porsche"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-hybrid">6-Speed Manual</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Porsche 718 Cayman GT4</h3>
+              <p class="car-card-specs">2023 · 6,800 km · 4.0L Flat-6 · 414 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 1.65 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Porsche 718 Cayman GT4" data-price="₹ 1.65 Cr" data-img="assets/images/hero_autovault_porsche.jpg" data-specs="3.99s 0-100 · 414 HP · 6-Speed Manual" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 5: Mercedes-Benz S-Class -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-1" data-category="sedan electric" data-brand="mercedes" data-title="Mercedes-Benz S-Class S580">
+            <div class="car-card-media">
+              <img src="assets/images/cars_mercedes_s_class.jpg" alt="Mercedes S-Class" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save S-Class"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-hybrid">Hybrid</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Mercedes-Benz S-Class S580</h3>
+              <p class="car-card-specs">2024 · 12,500 km · 4.0L Bi-Turbo Hybrid · 496 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 1.28 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Mercedes-Benz S-Class S580" data-price="₹ 1.28 Cr" data-img="assets/images/cars_mercedes_s_class.jpg" data-specs="4.4s 0-100 · 496 HP · Executive Seating" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 6: BMW X7 M60i -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-2" data-category="suv" data-brand="bmw" data-title="BMW X7 M60i">
+            <div class="car-card-media">
+              <img src="assets/images/cars_bmw_x7.jpg" alt="BMW X7" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save BMW X7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-diesel">M-Performance</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">BMW X7 M60i xDrive</h3>
+              <p class="car-card-specs">2024 · 8,200 km · 4.4L Twin-Turbo V8 · 523 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 1.32 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="BMW X7 M60i" data-price="₹ 1.32 Cr" data-img="assets/images/cars_bmw_x7.jpg" data-specs="4.5s 0-100 · 523 HP · 7-Seater Sky Lounge" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 7: Audi RS e-tron GT -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-3" data-category="electric supercar" data-brand="audi" data-title="Audi RS e-tron GT">
+            <div class="car-card-media">
+              <img src="assets/images/cars_audi_etron_gt.jpg" alt="Audi RS e-tron GT" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save Audi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-electric">Dual Electric</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Audi RS e-tron GT Quattro</h3>
+              <p class="car-card-specs">2024 · 4,200 km · 800V Dual Electric Motor · 637 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 1.89 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Audi RS e-tron GT" data-price="₹ 1.89 Cr" data-img="assets/images/cars_audi_etron_gt.jpg" data-specs="3.1s 0-100 · 637 HP · 800V Ultra-Fast Charge" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 8: Range Rover SV -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-4" data-category="suv" data-brand="land rover" data-title="Range Rover SV Bespoke">
+            <div class="car-card-media">
+              <img src="assets/images/cars_range_rover_sport.jpg" alt="Range Rover Sport" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save Range Rover"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-hybrid">SV Bespoke</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Range Rover SV Bespoke</h3>
+              <p class="car-card-specs">2024 · 5,600 km · 4.4L Twin-Turbo V8 · 606 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 2.45 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Range Rover SV Bespoke" data-price="₹ 2.45 Cr" data-img="assets/images/cars_range_rover_sport.jpg" data-specs="4.3s 0-100 · 606 HP · Executive Class Rear" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 9: Apex Valkyrie Hypercar -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-1" data-category="supercar electric" data-brand="apex" data-title="Apex Valkyrie Hypercar">
+            <div class="car-card-media">
+              <img src="assets/images/hero_hypercar.jpg" alt="Apex Valkyrie Hypercar" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save Apex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge" style="background:#0c0d11; color:#FF5722;">1 of 15 Worldwide</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Apex Valkyrie Hypercar</h3>
+              <p class="car-card-specs">2024 · Delivery Mileage · Hybrid Quad-Turbo · 1,100 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 3.85 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Apex Valkyrie Hypercar" data-price="₹ 3.85 Cr" data-img="assets/images/hero_hypercar.jpg" data-specs="2.4s 0-100 · 1,100 HP · Full Carbon Chassis" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 10: BMW M3 Competition -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-2" data-category="sedan supercar" data-brand="bmw" data-title="BMW M3 Competition">
+            <div class="car-card-media">
+              <img src="assets/images/blue_bmw_villa.jpg" alt="BMW M3 Competition" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save BMW M3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-hybrid">M xDrive</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">BMW M3 Competition xDrive</h3>
+              <p class="car-card-specs">2024 · 7,100 km · 3.0L TwinPower Turbo · 503 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 1.48 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="BMW M3 Competition" data-price="₹ 1.48 Cr" data-img="assets/images/blue_bmw_villa.jpg" data-specs="3.4s 0-100 · 503 HP · Carbon Bucket Seats" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 11: Ferrari Roma -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-3" data-category="grand-tourer supercar" data-brand="ferrari" data-title="Ferrari Roma">
+            <div class="car-card-media">
+              <img src="assets/images/cand_ferrari_roma.jpg" alt="Ferrari Roma" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save Ferrari"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-hybrid">La Nuova Dolce Vita</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Ferrari Roma V8 Coupe</h3>
+              <p class="car-card-specs">2023 · 5,200 km · 3.9L Twin-Turbo V8 · 612 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 3.76 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Ferrari Roma" data-price="₹ 3.76 Cr" data-img="assets/images/cand_ferrari_roma.jpg" data-specs="3.4s 0-100 · 612 HP · 8-Speed F1 Dual-Clutch" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 12: Porsche 911 GT3 RS -->
+          <div class="car-card inventory-car-card reveal-on-scroll stagger-4" data-category="supercar" data-brand="porsche" data-title="Porsche 911 GT3 RS">
+            <div class="car-card-media">
+              <img src="assets/images/cand_porsche_gt3.jpg" alt="Porsche 911 GT3 RS" class="car-img" loading="lazy">
+              <button class="car-heart-btn" aria-label="Save GT3 RS"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+              <span class="car-tag-badge badge-hybrid">Weissach Package</span>
+            </div>
+            <div class="car-card-body">
+              <h3 class="car-card-title">Porsche 911 GT3 RS (992)</h3>
+              <p class="car-card-specs">2024 · 2,100 km · 4.0L Naturally Aspirated Flat-6 · 518 HP</p>
+              <div class="car-card-footer">
+                <div class="car-price">₹ 3.52 Cr</div>
+                <button class="car-action-circle view-car-detail-btn" data-car="Porsche 911 GT3 RS" data-price="₹ 3.52 Cr" data-img="assets/images/cand_porsche_gt3.jpg" data-specs="3.2s 0-100 · 518 HP · Active DRS Aerodynamics" aria-label="View Details"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRE-FOOTER VIP CTA BANNER -->
+    <section class="banner-cta-section">
+      <div class="banner-cta-container reveal-on-scroll reveal-scale">
+        <div class="banner-content-container">
+          <div class="banner-text-block">
+            <h2 class="banner-heading">Looking for an unlisted off-market allocation?</h2>
+            <p class="banner-subheading">Our Private Vault Concierge sources bespoke exotics directly from private collectors worldwide.</p>
+          </div>
+          <div class="banner-action-block">
+            <a href="contact.html" class="btn-pill-coral">
+              <span>Private Vault Inquiry</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODALS -->
+  <div class="modal-backdrop" id="carDetailModal" aria-hidden="true" role="dialog">
+    <div class="modal-window car-detail-modal-window">
+      <button class="modal-close-circle modal-close-trigger" aria-label="Close Modal">&times;</button>
+      <div class="car-modal-grid">
+        <div class="car-modal-media"><img src="" alt="Car Showcase" id="detailModalImg" class="modal-car-photo"></div>
+        <div class="car-modal-info">
+          <span class="modal-badge-status">Certified Vault Selection</span>
+          <h2 class="modal-car-title" id="detailModalTitle">Vehicle Name</h2>
+          <div class="modal-car-price" id="detailModalPrice">₹ Price</div>
+          <p class="modal-car-specs" id="detailModalSpecs">Specs</p>
+          <div class="modal-car-actions">
+            <button class="btn-pill-coral" id="detailModalBookBtn"><span>Book Private Inspection</span></button>
+            <button class="btn-pill-dark modal-close-trigger"><span>Close</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="testDriveModal" aria-hidden="true" role="dialog">
+    <div class="modal-window">
+      <button class="modal-close-circle modal-close-trigger" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-kicker">PRIVATE APPOINTMENT</span>
+        <h2 class="modal-title">Book a Private Test Drive</h2>
+        <p class="modal-desc">Experience automotive excellence firsthand with our concierge team.</p>
+      </div>
+      <form class="modal-form" id="testDriveForm">
+        <div class="form-row">
+          <div class="form-group"><label for="tdName">Full Name</label><input type="text" id="tdName" required placeholder="Lord Julian Vance"></div>
+          <div class="form-group"><label for="tdPhone">Phone Number</label><input type="tel" id="tdPhone" required placeholder="+91 98765 43210"></div>
+        </div>
+        <div class="form-group">
+          <label for="tdCar">Vehicle of Interest</label>
+          <select id="tdCar" required>
+            <option value="Mercedes-AMG GT R">Mercedes-AMG GT R Coupe</option>
+            <option value="Lamborghini Huracán">Lamborghini Huracán Tecnica</option>
+            <option value="Bentley Continental GT">Bentley Continental GT V8</option>
+            <option value="Porsche 718 Cayman GT4">Porsche 718 Cayman GT4</option>
+            <option value="Ferrari Roma">Ferrari Roma V8</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-pill-coral btn-modal-submit"><span>Confirm VIP Reservation</span></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-col brand-col">
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="logo-mark"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 3L29 27H3L16 3Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 11L23 24H9L16 11Z" fill="#FF5722"/></svg></div>
+            <span class="logo-text">AUTOVAULT</span>
+          </a>
+          <p class="footer-tagline">Curators of rare, high-performance, and bespoke automotive masterworks worldwide.</p>
+        </div>
+        <div class="footer-col"><h4 class="footer-heading">Vault Navigation</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="cars.html">All Inventory</a></li><li><a href="services.html">Concierge Services</a></li><li><a href="about.html">About AutoVault</a></li><li><a href="contact.html">Private Desks</a></li></ul></div>
+        <div class="footer-col"><h4 class="footer-heading">Showrooms</h4><ul class="footer-links"><li>Mayfair, London W1</li><li>Beverly Hills, CA 90210</li><li>Dubai Marina, UAE</li><li>BKC, Mumbai 400051</li></ul></div>
+      </div>
+      <div class="footer-bottom-row"><p class="copyright-text">&copy; 2026 AUTOVAULT Global Motors. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <!-- Global Live Inventory Search Modal -->
+  <div class="modal-backdrop modal-search-backdrop" id="globalSearchModal" aria-hidden="true" role="dialog">
+    <div class="modal-card modal-search-card">
+      <button class="modal-close-btn" data-close="globalSearchModal" aria-label="Close search">×</button>
+      
+      <div class="search-modal-header">
+        <span class="search-modal-eyebrow">
+          <span class="pulse-dot"></span>
+          <span>AUTOVAULT REAL-TIME INVENTORY DISCOVERY</span>
+        </span>
+        <h2 class="search-modal-title">Search Luxury Allocations</h2>
+        
+        <div class="search-input-box">
+          <svg class="search-box-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="globalSearchInput" placeholder="Search by model, brand, engine (e.g. Porsche, V8, Huracán, 600+ HP)..." autocomplete="off" spellcheck="false">
+          <button type="button" class="search-clear-btn" id="globalSearchClear" aria-label="Clear search">×</button>
+        </div>
+
+        <div class="search-filter-pills-row">
+          <span class="search-pills-label">QUICK FILTERS:</span>
+          <div class="search-pills-wrap">
+            <button class="search-pill active" data-search-filter="all">All</button>
+            <button class="search-pill" data-search-filter="Porsche">Porsche</button>
+            <button class="search-pill" data-search-filter="Ferrari">Ferrari</button>
+            <button class="search-pill" data-search-filter="Mercedes-AMG">AMG</button>
+            <button class="search-pill" data-search-filter="Lamborghini">Lamborghini</button>
+            <button class="search-pill" data-search-filter="BMW">BMW M</button>
+            <button class="search-pill" data-search-filter="McLaren">McLaren</button>
+            <button class="search-pill" data-search-filter="V8">V8 Bi-Turbo</button>
+            <button class="search-pill" data-search-filter="V10">V10 Atmospheric</button>
+            <button class="search-pill" data-search-filter="Electric">Electric</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-results-meta">
+        <span id="searchResultsCount">Showing all 10 verified vault allocations</span>
+        <span class="search-shortcut-hint">Press <kbd>Esc</kbd> to close</span>
+      </div>
+
+      <div class="search-results-grid" id="globalSearchResults">
+        <!-- Live vehicle cards inserted dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

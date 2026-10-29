@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bespoke Concierge & Ownership Services | AUTOVAULT</title>
+  <meta name="description" content="Discover AUTOVAULT's white-glove automotive services: Global Enclosed Transport, High-Security Vault Storage, Bespoke Customization, and Private Track Experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,10 90,85 10,85' fill='%23FF5722'/></svg>">
+</head>
+<body class="autovault-theme">
+
+  <!-- Floating Toast -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toastMessage">Inquiry submitted successfully!</div>
+  </div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header header-dark" id="header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="logo-mark">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+            <path d="M16 3L29 27H3L16 3Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M16 11L23 24H9L16 11Z" fill="#FF5722"/>
+          </svg>
+        </div>
+        <span class="logo-text">AUTOVAULT</span>
+      </a>
+
+      <nav class="nav-pill" id="navPill">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="cars.html" class="nav-link">Cars</a></li>
+          <li class="nav-item"><a href="cars.html" class="nav-link">Buy</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-circle-btn" id="searchTrigger" aria-label="Search" title="Search Inventory">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="action-circle-btn wishlist-btn" id="wishlistTrigger" aria-label="Saved Cars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="wishlist-badge-count" id="wishlistCount">0</span>
+        </button>
+        <button class="btn-pill-dark btn-test-drive" id="openTestDriveBtn">
+          <span>Book Consultation</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO BANNER -->
+    <section class="page-hero-banner">
+      <div class="page-hero-container reveal-on-scroll">
+        <div class="page-hero-inner-split">
+          
+          <!-- Left: Hero Content -->
+          <div class="page-hero-content">
+            <div class="page-breadcrumbs">
+              <a href="index.html">Home</a>
+              <span class="sep">/</span>
+              <span>Bespoke Services</span>
+            </div>
+            <div class="page-hero-eyebrow">
+              <span class="hero-pulse-dot"></span>
+              <span>PRIVATE CLIENT CONCIERGE · PROTOCOL SUITE</span>
+            </div>
+            <h1 class="page-title">The Concierge <span class="page-title-gradient">Ecosystem</span></h1>
+            <p class="page-subtitle">From climate-monitored subterranean vault storage to international enclosed logistics, our private client desk oversees every dimension of rare vehicle stewardship.</p>
+            
+            <div class="page-hero-chips">
+              <div class="hero-chip-item">
+                <span class="hero-chip-dot"></span>
+                <span>Subterranean Vault Storage</span>
+              </div>
+              <div class="hero-chip-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFA07A" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon></svg>
+                <span>Air-Ride Enclosed Transit</span>
+              </div>
+              <div class="hero-chip-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>24/7 Mayfair Desk</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Secure Storage & Transit Protocol HUD Card -->
+          <div class="page-hero-telemetry-card">
+            <div class="telemetry-card-header">
+              <div class="telemetry-live-badge">
+                <span class="hero-pulse-dot"></span>
+                <span>FACILITY MONITORING</span>
+              </div>
+              <span class="telemetry-time">BIOMETRIC VAULT ONLINE</span>
+            </div>
+            
+            <div class="telemetry-metrics-grid">
+              <div class="telemetry-stat-box">
+                <span class="t-stat-label">RELATIVE HUMIDITY</span>
+                <span class="t-stat-val">45% <small>RH</small></span>
+                <span class="t-stat-sub">Precision Dehumidified</span>
+              </div>
+              <div class="telemetry-stat-box">
+                <span class="t-stat-label">TEMPERATURE</span>
+                <span class="t-stat-val">18.5 <small>°C</small></span>
+                <span class="t-stat-sub">Constant HVAC Sealed</span>
+              </div>
+              <div class="telemetry-stat-box">
+                <span class="t-stat-label">TRANSIT COVERAGE</span>
+                <span class="t-stat-val">₹ 100 <small>CR</small></span>
+                <span class="t-stat-sub">Underwritten Lloyd's Transit</span>
+              </div>
+              <div class="telemetry-stat-box">
+                <span class="t-stat-label">GLOBAL PORTS</span>
+                <span class="t-stat-val">28 <small>HUBS</small></span>
+                <span class="t-stat-sub">Direct Air & Sea Clearance</span>
+              </div>
+            </div>
+
+            <div class="telemetry-card-footer">
+              <span class="t-quick-label">SCHEDULE SERVICE CONCIERGE:</span>
+              <div class="t-quick-tags">
+                <button class="t-tag-btn" onclick="openModal('testDriveModal')">Vault Storage Inquiry</button>
+                <button class="t-tag-btn" onclick="openModal('testDriveModal')">Enclosed Transport</button>
+                <button class="t-tag-btn" onclick="openModal('valuationModal')">Asset Appraisal</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 SERVICES GRID -->
+    <section class="services-section">
+      <div class="services-grid-inner">
+        
+        <!-- Service 1 -->
+        <div class="service-card-item reveal-on-scroll stagger-1">
+          <div>
+            <div class="service-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            </div>
+            <h3 class="service-card-title">Enclosed Global Transport</h3>
+            <p class="service-card-desc">Air-ride suspension transport trailers with real-time GPS telemetry and comprehensive multi-million dollar transit insurance worldwide.</p>
+            <ul class="service-feature-list">
+              <li>Hydraulic tailgate low-angle loading</li>
+              <li>Dehumidified sealed cabin filtration</li>
+              <li>Direct door-to-door customs clearance</li>
+            </ul>
+          </div>
+          <button class="btn-pill-dark open-story-btn" style="width: 100%;"><span>Inquire for Transport</span></button>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card-item reveal-on-scroll stagger-2">
+          <div>
+            <div class="service-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="service-card-title">Climate Vault Storage</h3>
+            <p class="service-card-desc">Museum-grade humidity and temperature stabilization facilities. 24/7 biometric armed security with weekly fluid and tire maintenance.</p>
+            <ul class="service-feature-list">
+              <li>50% Relative Humidity stabilization</li>
+              <li>CTEK intelligent battery tender cycle</li>
+              <li>Monthly tire rotation & warm-up runs</li>
+            </ul>
+          </div>
+          <button class="btn-pill-dark open-story-btn" style="width: 100%;"><span>Reserve Vault Space</span></button>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card-item reveal-on-scroll stagger-3">
+          <div>
+            <div class="service-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+            </div>
+            <h3 class="service-card-title">Private Track Concierge</h3>
+            <p class="service-card-desc">Exclusive circuit rental days at premier FIA circuits. Pro driver telemetry coaching, pit crew mechanics, and telemetry analysis.</p>
+            <ul class="service-feature-list">
+              <li>Silverstone, Spa-Francorchamps, Yas Marina</li>
+              <li>Dedicated tire warmers & fuel management</li>
+              <li>Factory-trained master technicians on site</li>
+            </ul>
+          </div>
+          <button class="btn-pill-dark open-story-btn" style="width: 100%;"><span>Book Track Allocation</span></button>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card-item reveal-on-scroll stagger-1">
+          <div>
+            <div class="service-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            </div>
+            <h3 class="service-card-title">Bespoke Vault Studio</h3>
+            <p class="service-card-desc">Full Paint Protection Film (PPF), ceramic coatings, forged carbon fiber aerodynamic additions, and bespoke saddle-stitched leather interiors.</p>
+            <ul class="service-feature-list">
+              <li>Self-healing 10-mil ultra-clear PPF</li>
+              <li>Custom forged carbon exterior kits</li>
+              <li>Alcantara headliners & personalized treadplates</li>
+            </ul>
+          </div>
+          <button class="btn-pill-dark open-story-btn" style="width: 100%;"><span>Consult Design Studio</span></button>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card-item reveal-on-scroll stagger-2">
+          <div>
+            <div class="service-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <h3 class="service-card-title">Off-Market Acquisition</h3>
+            <p class="service-card-desc">Discrete representation for private collections. We locate, inspect, and negotiate rare hypercars not publicly listed for sale anywhere.</p>
+            <ul class="service-feature-list">
+              <li>Confidential NDA transactions</li>
+              <li>Factory archive provenance verification</li>
+              <li>Global escrow & title structuring</li>
+            </ul>
+          </div>
+          <button class="btn-pill-dark open-story-btn" style="width: 100%;"><span>Private Client Inquiry</span></button>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card-item reveal-on-scroll stagger-3">
+          <div>
+            <div class="service-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3 class="service-card-title">Structured Supercar Capital</h3>
+            <p class="service-card-desc">Specialized financing, multi-vehicle portfolio credit lines, and open-ended balloon leases tailored to high-net-worth liquidity profiles.</p>
+            <ul class="service-feature-list">
+              <li>Low-interest bespoke asset-backed loans</li>
+              <li>Tax-advantaged corporate leasing options</li>
+              <li>Instant 24-hour liquidity approvals</li>
+            </ul>
+          </div>
+          <button class="btn-pill-dark open-story-btn" style="width: 100%;"><span>Explore Capital Terms</span></button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+      <div class="faq-container reveal-on-scroll">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 2.5rem;">Frequently Asked Questions</h2>
+        
+        <div class="faq-item open">
+          <button class="faq-trigger">
+            <span>How does AUTOVAULT ensure delivery security across international borders?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            Every shipment is conducted in single-vehicle enclosed, air-suspended transporters with dedicated security escorts. Telemetry tracking gives clients minute-by-minute satellite visibility over cabin temperature, humidity, and speed until personal handover.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>Can I access my vehicle while in Vault Storage?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            Yes. Clients have 24/7 on-demand access via our VIP concierge app. With 4 hours advance notice, your vehicle is fully warmed, fueled with 98-octane racing fuel, detailed, and parked in the private departure lounge.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>What documentation is required for off-market exotic sourcing?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            Our private desk executes a standard Mutual Non-Disclosure Agreement (MNDA) and proof of funds authorization. We then unlock off-market dossiers directly from private European and Middle Eastern royal collections.
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- TEST DRIVE / INQUIRY MODAL -->
+  <div class="modal-backdrop" id="testDriveModal" aria-hidden="true" role="dialog">
+    <div class="modal-window">
+      <button class="modal-close-circle modal-close-trigger" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-kicker">CONCIERGE DESK</span>
+        <h2 class="modal-title">Request Private Service</h2>
+        <p class="modal-desc">Our master concierge officer will contact you within 60 minutes.</p>
+      </div>
+      <form class="modal-form" id="serviceInquiryForm">
+        <div class="form-row">
+          <div class="form-group"><label for="srvName">Full Name</label><input type="text" id="srvName" required placeholder="Lord Julian Vance"></div>
+          <div class="form-group"><label for="srvPhone">Phone Number</label><input type="tel" id="srvPhone" required placeholder="+91 98765 43210"></div>
+        </div>
+        <div class="form-group">
+          <label for="srvType">Select Service</label>
+          <select id="srvType" required>
+            <option value="transport">Enclosed Global Transport</option>
+            <option value="storage">Climate Vault Storage</option>
+            <option value="track">Private Track Concierge</option>
+            <option value="studio">Bespoke Vault Studio (PPF / Custom)</option>
+            <option value="sourcing">Off-Market Acquisition</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-pill-coral btn-modal-submit"><span>Submit VIP Inquiry</span></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-col brand-col">
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="logo-mark"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M16 3L29 27H3L16 3Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 11L23 24H9L16 11Z" fill="#FF5722"/></svg></div>
+            <span class="logo-text">AUTOVAULT</span>
+          </a>
+          <p class="footer-tagline">Curators of rare, high-performance, and bespoke automotive masterworks worldwide.</p>
+        </div>
+        <div class="footer-col"><h4 class="footer-heading">Vault Navigation</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="cars.html">All Inventory</a></li><li><a href="services.html">Concierge Services</a></li><li><a href="about.html">About AutoVault</a></li><li><a href="contact.html">Private Desks</a></li></ul></div>
+        <div class="footer-col"><h4 class="footer-heading">Showrooms</h4><ul class="footer-links"><li>Mayfair, London W1</li><li>Beverly Hills, CA 90210</li><li>Dubai Marina, UAE</li><li>BKC, Mumbai 400051</li></ul></div>
+      </div>
+      <div class="footer-bottom-row"><p class="copyright-text">&copy; 2026 AUTOVAULT Global Motors. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <!-- Global Live Inventory Search Modal -->
+  <div class="modal-backdrop modal-search-backdrop" id="globalSearchModal" aria-hidden="true" role="dialog">
+    <div class="modal-card modal-search-card">
+      <button class="modal-close-btn" data-close="globalSearchModal" aria-label="Close search">×</button>
+      
+      <div class="search-modal-header">
+        <span class="search-modal-eyebrow">
+          <span class="pulse-dot"></span>
+          <span>AUTOVAULT REAL-TIME INVENTORY DISCOVERY</span>
+        </span>
+        <h2 class="search-modal-title">Search Luxury Allocations</h2>
+        
+        <div class="search-input-box">
+          <svg class="search-box-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="globalSearchInput" placeholder="Search by model, brand, engine (e.g. Porsche, V8, Huracán, 600+ HP)..." autocomplete="off" spellcheck="false">
+          <button type="button" class="search-clear-btn" id="globalSearchClear" aria-label="Clear search">×</button>
+        </div>
+
+        <div class="search-filter-pills-row">
+          <span class="search-pills-label">QUICK FILTERS:</span>
+          <div class="search-pills-wrap">
+            <button class="search-pill active" data-search-filter="all">All</button>
+            <button class="search-pill" data-search-filter="Porsche">Porsche</button>
+            <button class="search-pill" data-search-filter="Ferrari">Ferrari</button>
+            <button class="search-pill" data-search-filter="Mercedes-AMG">AMG</button>
+            <button class="search-pill" data-search-filter="Lamborghini">Lamborghini</button>
+            <button class="search-pill" data-search-filter="BMW">BMW M</button>
+            <button class="search-pill" data-search-filter="McLaren">McLaren</button>
+            <button class="search-pill" data-search-filter="V8">V8 Bi-Turbo</button>
+            <button class="search-pill" data-search-filter="V10">V10 Atmospheric</button>
+            <button class="search-pill" data-search-filter="Electric">Electric</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-results-meta">
+        <span id="searchResultsCount">Showing all 10 verified vault allocations</span>
+        <span class="search-shortcut-hint">Press <kbd>Esc</kbd> to close</span>
+      </div>
+
+      <div class="search-results-grid" id="globalSearchResults">
+        <!-- Live vehicle cards inserted dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
